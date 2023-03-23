@@ -1,4 +1,0 @@
-run install.bat
-run compslogger.py
-
-its self explanatory
