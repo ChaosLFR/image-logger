@@ -25,8 +25,8 @@ You can also modify the code in utils
 If your interested in buying private comps methods DM me ->
 
 escrow#0001 - discord
-https://discord.gg/comps
+https://discord.gg/compers
 
 # Creds
 escrow#0001
-https://discord.gg/comps
+https://discord.gg/compers
